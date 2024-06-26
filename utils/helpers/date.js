@@ -4,4 +4,4 @@ const date = new Date()
                     .replace(/,/g, '')
                     .replace(/ /g, '-');
 
-module.exports = date;
+export default date;

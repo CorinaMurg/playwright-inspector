@@ -3,4 +3,4 @@ const csvTimestampDescription = {
     unix: "in unix format: https://en.wikipedia.org/wiki/Unix_time"
 };
 
-module.exports = csvTimestampDescription;
+export default csvTimestampDescription;

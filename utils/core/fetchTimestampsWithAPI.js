@@ -1,8 +1,8 @@
-const axios = require('axios');
+import axios from 'axios';
 
 const HN_API_BASE = 'https://hacker-news.firebaseio.com/v0';
 
-async function fetchTimestampsWithAPI() {  
+export default async function fetchTimestampsWithAPI() {  
     try {
         const idData = await axios.get(`${HN_API_BASE}/newstories.json?print=pretty`);
     
@@ -19,5 +19,3 @@ async function fetchTimestampsWithAPI() {
         return [];
     }
 }
-
-module.exports = fetchTimestampsWithAPI;

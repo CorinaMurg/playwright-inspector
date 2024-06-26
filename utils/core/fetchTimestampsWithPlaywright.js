@@ -1,11 +1,11 @@
-const { chromium } = require('playwright');
+import { chromium } from 'playwright';
 
-async function fetchTimestampsWithPlaywright() {
+export default async function fetchTimestampsWithPlaywright() {
     const browser = await chromium.launch();
     const page = await browser.newPage();
 
     try {
-        await page.goto("https://news.ycombinator.com/newest");
+        await page.goto("https://news.ycombinator.com/newest/");
 
         let timeStamps = [];
         for (let i = 0; i < 4; i++) {
@@ -31,5 +31,3 @@ async function querySelectTimestamps (page, numberOfArticles) {
         return timeStampElements.slice(0, numberOfArticles).map(el => el.getAttribute('title'));
     }, numberOfArticles);
 }
-
-module.exports = fetchTimestampsWithPlaywright;

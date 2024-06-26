@@ -8,21 +8,20 @@
 // webforeveryone: testing articles
 
 
-const areTimestampsInDescendingOrder = require('./utils/core/areTimestampsInDescendingOrder');
-const fetchTimestampsWithPlaywright = require('./utils/core/fetchTimestampsWithPlaywright');
-const askToProceedWithAPI = require('./utils/core/askToProceedWithAPI');
-const printFindings = require('./utils/core/printFindings');
-const writeToCSV = require('./utils/core/writeToCSV');
-
-const rl = require('./utils/helpers/readline');
-const loadingAnimation = require('./utils/helpers/loadingAnimation');
-const messages = require('./utils/helpers/messages');
-const csvTitleDescription = require('./utils/helpers/csvTimestampDescription');
-const hello = require('./utils/helpers/hello');
+import rl from './utils/helpers/readline.js';
+import messages from './utils/helpers/messages.js';
+import loadingAnimation from './utils/helpers/loadingAnimation.js';
+import writeToCSV from './utils/core/writeToCSV.js';
+import areTimestampsInDescendingOrder from './utils/core/areTimestampsInDescendingOrder.js';
+import printFindings from './utils/core/printFindings.js';
+import csvTitleDescription from './utils/helpers/csvTimestampDescription.js';
+import fetchTimestampsWithPlaywright from './utils/core/fetchTimestampsWithPlaywright.js';
+import askToProceedWithAPI from './utils/core/askToProceedWithAPI.js';
+import hello from './utils/helpers/hello.js';
 
 
 // Start server for timestamp data download
-const app = require('./utils/core/server');
+import app from './utils/core/server.js';
 const port = 3000;  
 app.listen(port, () => {});
 

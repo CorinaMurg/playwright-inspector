@@ -1,9 +1,9 @@
-const rl = require('../helpers/readline');
-const messages = require('../helpers/messages');
-const loadingAnimation = require('../helpers/loadingAnimation');
-const handleUserInput = require('../helpers/handleUserInput');
+import  rl from '../helpers/readline.js';
+import messages from '../helpers/messages.js';
+import loadingAnimation from '../helpers/loadingAnimation.js';
+import handleUserInput from '../helpers/handleUserInput.js';
 
-async function printFindings(sorted, source) {
+export default async function printFindings(sorted, source) {
     console.log(messages.success);
     await new Promise(resolve => setTimeout(resolve, 2000));
     const stopAnimation = loadingAnimation(messages.answerIs);
@@ -33,4 +33,3 @@ async function printFindings(sorted, source) {
     );
 }
 
-module.exports = printFindings;

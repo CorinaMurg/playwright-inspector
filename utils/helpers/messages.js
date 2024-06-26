@@ -1,5 +1,5 @@
-const date = require('./date');
-const folderName = require('../core/folderName');
+import date from './date.js';
+import folderName from '../core/folderName.js';
 
 const messages = {
     "hello": 'Hello, I\'m Corina. 👋',
@@ -24,4 +24,4 @@ const messages = {
     "exit": 'Press Ctrl + C to exit.',
 };
 
-module.exports = messages;
+export default messages;

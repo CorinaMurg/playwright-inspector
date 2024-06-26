@@ -1,7 +1,7 @@
-const hideCursor = require('./hideCursor');
-const showCursor = require('./showCursor');
+import hideCursor from './hideCursor.js';
+import showCursor from './showCursor.js';
 
-function loadingAnimation(message) {
+export default function loadingAnimation(message) {
     hideCursor();
     const symbols = ['|', '/', '-', '\\'];
     let index = 0;
@@ -17,5 +17,3 @@ function loadingAnimation(message) {
         showCursor();
     };
 }
-
-module.exports = loadingAnimation;

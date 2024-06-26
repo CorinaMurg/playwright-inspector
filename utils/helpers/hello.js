@@ -1,8 +1,6 @@
-const messages = require('./messages');
+import messages from './messages.js';
 
-function hello() {
+export default function hello() {
     console.log(messages.hello);
     console.log(messages.checkHN);
 }
-
-module.exports = hello;

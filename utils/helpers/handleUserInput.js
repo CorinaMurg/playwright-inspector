@@ -1,7 +1,7 @@
-const rl = require('./readline');
-const messages = require('../helpers/messages');
+import rl from './readline.js';
+import messages from '../helpers/messages.js';
 
-function handleUserInput(rl, attemptCount = 0, prompt, onYes, onNo) {
+export default function handleUserInput(rl, attemptCount = 0, prompt, onYes, onNo) {
     rl.question(prompt, (answer) => {
         answer = answer.trim().toLowerCase();
         if (!['y', 'yes', 'n', 'no', ''].includes(answer)) {
@@ -24,4 +24,3 @@ function handleUserInput(rl, attemptCount = 0, prompt, onYes, onNo) {
     });
 }
 
-module.exports = handleUserInput;

@@ -1,7 +1,8 @@
-const express = require('express');
-const folderName = require('./folderName');
-const app = express();
+import express from 'express';
+import folderName from './folderName.js';
 
+const app = express();
 app.use('/files', express.static(folderName));
 
-module.exports = app;
+export default app;
+

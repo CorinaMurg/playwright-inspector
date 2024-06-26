@@ -1,14 +1,14 @@
-const handleUserInput = require('../helpers/handleUserInput');
-const rl = require('../helpers/readline');
-const fetchTimestampsWithAPI = require('./fetchTimestampsWithAPI');
-const writeToCSV = require('./writeToCSV');
-const areTimestampsInDescendingOrder = require('./areTimestampsInDescendingOrder');
-const printFindings = require('./printFindings');
-const messages = require('../helpers/messages');
-const loadingAnimation = require('../helpers/loadingAnimation');
-const csvTitleDescription = require('../helpers/csvTimestampDescription');
+import handleUserInput from '../helpers/handleUserInput.js';
+import rl from '../helpers/readline.js';
+import messages from '../helpers/messages.js';
+import loadingAnimation from '../helpers/loadingAnimation.js';
+import writeToCSV from './writeToCSV.js';
+import areTimestampsInDescendingOrder from './areTimestampsInDescendingOrder.js';
+import printFindings from './printFindings.js';
+import csvTitleDescription from '../helpers/csvTimestampDescription.js';
+import fetchTimestampsWithAPI from './fetchTimestampsWithAPI.js';
 
-async function askToProceedWithAPI() {
+export default async function askToProceedWithAPI() {
     handleUserInput(
         rl,
         0,
@@ -34,5 +34,3 @@ async function askToProceedWithAPI() {
         }
     );
 }
-
-module.exports = askToProceedWithAPI;

@@ -1,3 +1,4 @@
 const folderName = 'timestamps';
 
-module.exports = folderName;
+export default folderName;
+
