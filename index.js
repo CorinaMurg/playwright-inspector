@@ -3,8 +3,6 @@
 
 // typescript
 // eslint
-// json2csv
-// import
 // webforeveryone: testing articles
 
 
