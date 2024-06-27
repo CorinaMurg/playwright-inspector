@@ -18,7 +18,7 @@ export default async function writeToCSV(timestamps: string[], source: string, d
     });
 
     const fields = [
-        { label: 'Timestamp', value: 'timestamp' },
+        { label: 'Timestamp*', value: 'timestamp' },
         { label: 'Is Descending?', value: 'isDescending' },
         { label: describeTimestampTitle, value: '' } 
     ];
