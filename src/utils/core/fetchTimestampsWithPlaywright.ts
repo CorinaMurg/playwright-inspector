@@ -9,16 +9,16 @@ export default async function fetchTimestampsWithPlaywright() {
     try {
         await page.goto("https://news.ycombinator.com/newest/");
 
-        let timeStamps: string[] = [];
+        let timestamps: string[] = [];
         for (let i = 0; i < 4; i++) {
             if (i > 0) { 
                 await page.click('a.morelink');
                 await page.waitForLoadState('load');
             }
             const currentPageTimeStamps = await querySelectTimestamps(page, i === 3 ? 10 : 30); 
-            timeStamps = timeStamps.concat(currentPageTimeStamps);
+            timestamps = timestamps.concat(currentPageTimeStamps);
         }
-        return timeStamps;
+        return timestamps;
     }   catch (error) {
             console.error(error);
             return [];
@@ -29,7 +29,7 @@ export default async function fetchTimestampsWithPlaywright() {
 
 async function querySelectTimestamps (page: Page, numberOfArticles: number): Promise<string[]>{
     return page.evaluate((numberOfArticles: number) => {
-        const timeStampElements = Array.from(document.querySelectorAll('span.age'));
-        return timeStampElements.slice(0, numberOfArticles).map(el => el.getAttribute('title') || '');
+        const timestampElements = Array.from(document.querySelectorAll('span.age'));
+        return timestampElements.slice(0, numberOfArticles).map(el => el.getAttribute('title') || '');
     }, numberOfArticles);
 }
