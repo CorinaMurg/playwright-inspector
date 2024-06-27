@@ -2,7 +2,7 @@
 // read artciles + video
 
 // typescript
-// eslint
+
 // webforeveryone: testing articles
 
 
