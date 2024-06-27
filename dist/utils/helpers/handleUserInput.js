@@ -1,6 +1,4 @@
-import rl from './readline.js';
-import messages from '../helpers/messages.js';
-
+import messages from './messages.js';
 export default function handleUserInput(rl, attemptCount = 0, prompt, onYes, onNo) {
     rl.question(prompt, (answer) => {
         answer = answer.trim().toLowerCase();
@@ -10,17 +8,17 @@ export default function handleUserInput(rl, attemptCount = 0, prompt, onYes, onN
                 console.log(messages.exitingIfInvalid);
                 console.log(messages.exit);
                 rl.close();
-            } else {
+            }
+            else {
                 handleUserInput(rl, attemptCount, messages.invalid(answer), onYes, onNo);
             }
             return;
         }
         if (['y', 'yes', ''].includes(answer)) {
-            onYes();  
-        } 
+            onYes();
+        }
         if (['n', 'no'].includes(answer)) {
             onNo();
-        } 
+        }
     });
 }
-

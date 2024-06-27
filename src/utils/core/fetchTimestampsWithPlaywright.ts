@@ -1,20 +1,22 @@
 import { chromium } from 'playwright';
+import { Page } from 'playwright';
+
 
 export default async function fetchTimestampsWithPlaywright() {
     const browser = await chromium.launch();
     const page = await browser.newPage();
 
     try {
-        await page.goto("https://news.ycombinator.com/newest");
+        await page.goto("https://news.ycombinator.com/newest/");
 
-        let timeStamps = [];
+        let timeStamps: string[] = [];
         for (let i = 0; i < 4; i++) {
             if (i > 0) { 
                 await page.click('a.morelink');
                 await page.waitForLoadState('load');
             }
-            const thisPageTimeStamps = await querySelectTimestamps(page, i === 3 ? 10 : 30); 
-            timeStamps = timeStamps.concat(thisPageTimeStamps);
+            const currentPageTimeStamps = await querySelectTimestamps(page, i === 3 ? 10 : 30); 
+            timeStamps = timeStamps.concat(currentPageTimeStamps);
         }
         return timeStamps;
     }   catch (error) {
@@ -25,9 +27,9 @@ export default async function fetchTimestampsWithPlaywright() {
     }
 }
 
-async function querySelectTimestamps (page, numberOfArticles) {
-    return page.evaluate((numberOfArticles) => {
+async function querySelectTimestamps (page: Page, numberOfArticles: number): Promise<string[]>{
+    return page.evaluate((numberOfArticles: number) => {
         const timeStampElements = Array.from(document.querySelectorAll('span.age'));
-        return timeStampElements.slice(0, numberOfArticles).map(el => el.getAttribute('title'));
+        return timeStampElements.slice(0, numberOfArticles).map(el => el.getAttribute('title') || '');
     }, numberOfArticles);
 }

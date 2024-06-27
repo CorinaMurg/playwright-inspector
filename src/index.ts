@@ -1,11 +1,3 @@
-// linkedIn
-// read artciles + video
-
-// typescript
-
-// webforeveryone: testing articles
-
-
 import rl from './utils/helpers/readline.js';
 import messages from './utils/helpers/messages.js';
 import loadingAnimation from './utils/helpers/loadingAnimation.js';
@@ -16,7 +8,6 @@ import csvTitleDescription from './utils/helpers/csvTimestampDescription.js';
 import fetchTimestampsWithPlaywright from './utils/core/fetchTimestampsWithPlaywright.js';
 import askToProceedWithAPI from './utils/core/askToProceedWithAPI.js';
 import hello from './utils/helpers/hello.js';
-
 
 // Start server for timestamp data download
 import app from './utils/core/server.js';

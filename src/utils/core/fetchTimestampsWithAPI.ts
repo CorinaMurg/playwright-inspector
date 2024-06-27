@@ -6,7 +6,7 @@ export default async function fetchTimestampsWithAPI() {
     try {
         const idData = await axios.get(`${HN_API_BASE}/newstories.json?print=pretty`);
     
-        const storyPromises = idData.data.slice(0, 100).map(id => 
+        const storyPromises = idData.data.slice(0, 100).map((id: number) => 
             axios.get(`${HN_API_BASE}/item/${id}.json?print=pretty`)
         );
     

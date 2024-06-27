@@ -1,18 +1,18 @@
-import  rl from '../helpers/readline.js';
+import rl from '../helpers/readline.js';
 import messages from '../helpers/messages.js';
 import loadingAnimation from '../helpers/loadingAnimation.js';
 import handleUserInput from '../helpers/handleUserInput.js';
 
-export default async function printFindings(sorted, source) {
+export default async function printFindings(sorted: boolean, source: string) {
     console.log(messages.success);
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise<void>(resolve => setTimeout(resolve, 2000));
     const stopAnimation = loadingAnimation(messages.answerIs);
-    await new Promise(resolve => setTimeout(() => {
+    await new Promise<void>(resolve => setTimeout(() => {
         stopAnimation();  
         resolve();  
     }, 5000));
     console.log(sorted ? messages.yesDescending : messages.noDescending);
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise<void>(resolve => setTimeout(resolve, 2000));
     console.log(messages.csvFile(source));
 
     handleUserInput(

@@ -1,7 +1,7 @@
 import hideCursor from './hideCursor.js';
 import showCursor from './showCursor.js';
 
-export default function loadingAnimation(message) {
+export default function loadingAnimation(message: string) {
     hideCursor();
     const symbols = ['|', '/', '-', '\\'];
     let index = 0;
