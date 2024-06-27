@@ -18,7 +18,7 @@ export default async function askToProceedWithAPI() {
             let timestamps = await fetchTimestampsWithAPI();
             stopAnimation();
             if (timestamps.length !== 0) {
-                await writeToCSV(timestamps, csvTitleDescription.iso);
+                await writeToCSV(timestamps, 'API', csvTitleDescription.iso);
                 const sorted = areTimestampsInDescendingOrder(timestamps);
                 printFindings(sorted, 'API');
             } else {

@@ -5,7 +5,7 @@ export default async function fetchTimestampsWithPlaywright() {
     const page = await browser.newPage();
 
     try {
-        await page.goto("https://news.ycombinator.com/newest/");
+        await page.goto("https://news.ycombinator.com/newest");
 
         let timeStamps = [];
         for (let i = 0; i < 4; i++) {
