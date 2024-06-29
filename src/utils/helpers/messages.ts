@@ -39,7 +39,7 @@ const messages: Messages = {
     noDescending: 'No! 😱 😱 😱',
     csvFile: source => `Check the timestamp data in ➡️  src/${folderName}/${source}_${date}.csv`,
     offerDownload: 'Interested in downloading the file? (y/n): ',
-    goodbye: 'Auf Wiedersehen, goodbye then. Have a great day! 🌞',
+    goodbye: 'Goodbye then. Have a great day! 🌞',
     csvDownload: source => `Download the file at ➡️  http://localhost:3000/files/${source}_${date}.csv`,
     finalGoodbye: 'Have a great day! 🌞',
     invalid: answer => `What is this "${answer}" of yours? 🤔  You must type "y" or "n": `,
