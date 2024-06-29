@@ -33,7 +33,7 @@ const messages: Messages = {
     goodbyeAPI: 'Well, goodbye for now. Please try again later. 👋',
     fetchAPI: 'Fetching timestamps via the Hacker News API ...',
     fetchAPIError: 'Bummer ... the API call has failed as well. Let\'s retry later.',
-    success: `\rSuccess! We have the data. Are the articles sorted from newest to oldest?`,
+    success: 'Success! We have the data. Are the articles sorted from newest to oldest?',
     answerIs: 'The answer is ... 🥁 roll please ... ',
     yesDescending: 'Yes! 🎉 🎉 🎉',
     noDescending: 'No! 😱 😱 😱',

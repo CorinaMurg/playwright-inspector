@@ -3,7 +3,7 @@ import { writeFileSync } from 'fs';
 import date from '../helpers/date.js';
 import folderName from './folderName.js';
 
-export default async function writeToCSV(timestamps: string[], source: string, describeTimestampTitle: string) {
+export default async function writeToCSV(timestamps: (number | string)[], source: string, describeTimestampTitle: string) {
     const timestampsWithOrderCheck = timestamps.map((timestamp, index) => {
         let isDescending = '-'
         if (index > 0) {
@@ -13,7 +13,6 @@ export default async function writeToCSV(timestamps: string[], source: string, d
         return { 
             timestamp, 
             isDescending, 
-            description: `*${describeTimestampTitle}`  
         };
     });
 

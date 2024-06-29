@@ -12,7 +12,7 @@ export default function loadingAnimation(message: string) {
 
     return function stopLoadingAnimation() {
         clearInterval(interval);
-        process.stdout.write('\r'.padEnd(40, ' '));  
+        process.stdout.write('\r'.padEnd(60, ' '));  
         process.stdout.write('\r');  
         showCursor();
     };

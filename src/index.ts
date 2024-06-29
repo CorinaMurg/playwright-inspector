@@ -25,7 +25,7 @@ async function validateDescendingOrder() {
         await askToProceedWithAPI();
     } else {
         stopAnimation();
-        await writeToCSV(timestamps, "HN", csvTitleDescription.iso);
+        await writeToCSV(timestamps, 'HN', csvTitleDescription.iso);
         const sorted = areTimestampsInDescendingOrder(timestamps);
         printFindings(sorted, 'HN');
     }

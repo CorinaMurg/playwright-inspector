@@ -2,7 +2,13 @@ import axios from 'axios';
 
 const HN_API_BASE = 'https://hacker-news.firebaseio.com/v0';
 
-export default async function fetchTimestampsWithAPI() {  
+interface Story {
+    data: {
+        time: number;   
+    }
+}
+
+export default async function fetchTimestampsWithAPI(): Promise<number[]>{  
     try {
         const idData = await axios.get(`${HN_API_BASE}/newstories.json?print=pretty`);
     
@@ -11,7 +17,7 @@ export default async function fetchTimestampsWithAPI() {
         );
     
         const stories = await Promise.all(storyPromises);
-        const timeStamps = stories.map(story => story.data.time);
+        const timeStamps = stories.map((story: Story ) => story.data.time);
         return timeStamps;
 
     } catch (error) {
@@ -19,3 +25,5 @@ export default async function fetchTimestampsWithAPI() {
         return [];
     }
 }
+
+

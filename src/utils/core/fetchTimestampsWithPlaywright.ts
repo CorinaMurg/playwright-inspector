@@ -2,12 +2,12 @@ import { chromium } from 'playwright';
 import { Page } from 'playwright';
 
 
-export default async function fetchTimestampsWithPlaywright() {
+export default async function fetchTimestampsWithPlaywright(): Promise<string[]>{
     const browser = await chromium.launch();
     const page = await browser.newPage();
 
     try {
-        await page.goto("https://news.ycombinator.com/newest/");
+        await page.goto("https://news.ycombinator.com/newest");
 
         let timestamps: string[] = [];
         for (let i = 0; i < 4; i++) {
