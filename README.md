@@ -1,21 +1,32 @@
-# Hello 🐺 QA Wolf! 👋
+# 🎭 Playwright Inspector
 
-I'm Corina. 
+## Hey there! This is a small "how cool is Playwright" project.
 
-This project is my solution to the take-home assignment for the QA Engineer role.
-Specifically, it answers the following prompt:
-- Edit the `index.js` file in this project to go to [Hacker News/newest](https://news.ycombinator.com/newest) and validate that the first 100 articles are sorted from newest to oldest.
+## Tech Stack
+- JavaScript
+- TypeScript
+- NodeJS
+- Playwright
+- Express
+
+## Additional Tools
+- node readline (for command line interactions)
+- axios (for HTTP requests)
+- json2csv (for converting JSON data to CSV files)
+
+## What Does It Do?
+A lot!
+- **Automated Sorting Verification**: Checks that the Hacker News latest articles are displayed in descending order
+- **Express Server Integration**: A lightweight server setup to manage download requests
+- **Command Line Interaction**: Users can interact with the program via the command line to perform checks and request downloads
+- **CSV Data Export**: Saves the timestamp data as a CSV file (for the skeptic in all of us 😉)
 
 
-## How to get it started
+## Getting Started
+1. **Install Node Modules**: Run `npm i` to install all dependencies.
+2. **Run the Script**: Execute `npm run build:start` to start the server and begin interacting with the application.
 
-1. Install node modules: `npm i`
-
-2. Run script: `npm run build:start`
+Explore how you can use Playwright to automate web tasks and manage data exports with ease!
 
 
-## Contact
-
-This project was fun, fun, fun. And an opportunity to learn a few more JavaScript tricks along the way.
-Thank you for it, and looking forward to hearing back from you! For any questions, feel free to reach me at [corina.murg@gmail.com](mailto:corina.murg@gmail.com).
 
