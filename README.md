@@ -1,7 +1,7 @@
 # 🎭 Playwright Inspector
 
 Hey there! This is a neat "how cool is Playwright" project.
-Check it out to see how Playwright can be easily integrated with other tools to automate web tasks and manage data exports.
+Check it out to see how easy is to integrate Playwright with other tools to automate web tasks and manage data exports.
 
 ## Tech Stack
 - TypeScript
@@ -27,7 +27,7 @@ A lot!
 1. **Install Node Modules**: Run `npm i` to install all dependencies.
 2. **Run the Script**: Execute `npm run build:start` to start the server and begin interacting with the application.
 
-Explore how you can use Playwright to automate web tasks and manage data exports with ease!
+
 
 
 
