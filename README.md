@@ -1,6 +1,6 @@
 # 🎭 Playwright Inspector
 
-## Hey there! This is a small "how cool is Playwright" project.
+Hey there! This is a small "how cool is Playwright" project.
 
 ## Tech Stack
 - JavaScript
