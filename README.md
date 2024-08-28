@@ -1,12 +1,13 @@
 # 🎭 Playwright Inspector
 
-Hey there! This is a small "how cool is Playwright" project.
+Hey there! This is a neat "how cool is Playwright" project.
+Check it out to see how Playwright can be easily integrated with other tools to automate web tasks and manage data exports.
 
 ## Tech Stack
-- JavaScript
 - TypeScript
 - NodeJS
 - Playwright
+- JavaScript
 - Express
 
 ## Additional Tools
